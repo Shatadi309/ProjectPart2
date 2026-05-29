@@ -1,0 +1,143 @@
+﻿<Window x:Class="Project_Part2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Part2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!-- start of parent grid-->
+
+        <!--HOME grid.This grid displays the logo and the
+        continue button
+        -->
+
+        <Grid x:Name="home_grid" Visibility="Visible" Background="Black">
+
+            <!--Logo-->
+            <Image
+                Source="/logo.jpg"
+                Height="200"
+                Width="300"
+                Margin="0,0,0,200"
+       
+                />
+
+            <!--Welcome Message-->
+            <TextBlock
+                Text="Welcome! VANTA at your service. Click below to continue"
+                Height="30"
+                TextAlignment="Center"
+                Margin="0,30,0,0"
+                FontFamily="Arial Unicode MS"
+                Foreground="GreenYellow"
+                />
+
+            <!--button to continue-->
+            <Button
+                Height="45"
+                Width="250"
+                Margin="0,200,0,0"
+                Content="Continue"
+                Click="proceed"
+                Background="GreenYellow"
+                />
+        </Grid>
+
+        <!--USERNAME grid to prompt user to login-->
+        <Grid x:Name="username_grid" Visibility="Hidden" Background="Black">
+
+            <!--Logo-->
+            <Image
+                Source="/logo.jpg"
+                Height="200"
+                Width="300"
+                Margin="0,0,0,200"
+                
+                />
+
+            <!--Hint message-->
+            <TextBlock
+                Text="Enter username"
+                Height="25"
+                Width="270"
+                TextAlignment="Justify"
+                Margin="0,30,0,0"
+                FontFamily="Arial Unicode MS"
+                Foreground="GreenYellow"
+                
+                />
+
+            <!--Prompting username-->
+            <TextBox
+                Height="40"
+                Width="270"
+                TextAlignment="Center"
+                Margin="0,100,0,0"
+                FontFamily="Arial Unicode MS"
+                x:Name="username_input"
+                />
+
+            <!--error message-->
+            <TextBlock
+                Text="Ensure username is entered"
+                Height="25"
+                Width="270"
+                TextAlignment="Justify"
+                Margin="0,180,0,0"
+                Foreground="Blue"
+                FontFamily="Arial Unicode MS"
+                Background="GreenYellow"
+                />
+
+            <!--button to Sign In-->
+            <Button
+                Height="40"
+                Width="270"
+                Margin="0,250,0,0"
+                Content="Sign In"
+                Click="submit_name"
+                Background="GreenYellow"
+                />
+
+        </Grid>
+
+        <!--CHAT grid to handle chats between the AI bot
+        and the user
+        -->
+
+        <Grid x:Name="chat_grid" Visibility="Hidden" Background="Black">
+
+            <!--List view to display messages-->
+            <ListView
+                x:Name="chats"
+                Height="300"
+                Margin="0,0,0,130"
+                Background="Black"
+                />
+
+            <!--Textbox to promt questions-->
+            <TextBox
+                x:Name="question"
+                Height="50"
+                Width="480"
+                Margin="0,300,300,0"
+                />
+
+            <!--button to send-->
+            <Button
+                Height="45"
+                Width="260"
+                Margin="490,300,0,0"
+                Content="send"
+                Click="send"
+                Background="GreenYellow"
+                
+          
+                />
+        </Grid>
+
+    </Grid> <!--end of parent grid-->
+
+</Window>
